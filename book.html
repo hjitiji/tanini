@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tanini — Book a Trip</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page-wrap">
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html">Home</a>
+      <a href="things-to-do.html">Things To Do</a>
+      <a href="lodging.html">Lodging</a>
+      <a href="dining.html">Dining</a>
+      <a href="transportation.html">Transportation</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+<section class="hero-full hero-booking">
+  <div class="container">
+    <div class="hero">
+      <h1>BOOK A TRIP!</h1>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+    <section class="panel">
+      <div class="form-wrap">
+        <form id="bookingForm" class="booking-form">
+          <div class="row">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" />
+          </div>
+
+          <div class="row">
+            <label for="phone">Phone:</label>
+            <input id="phone" name="phone" type="tel" />
+          </div>
+
+          <div class="row">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" />
+          </div>
+
+          <div class="row-2">
+            <label for="arrival">Arrival:</label>
+            <input id="arrival" name="arrival" type="date" />
+
+            <label for="departure">Departure:</label>
+            <input id="departure" name="departure" type="date" />
+          </div>
+
+          <div class="actions">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="panel reviews">
+      <div class="ph avatar reviewfour">
+      </div>
+
+      <div>
+        <h2>REVIEWS</h2>
+        <p>
+          “Booking was simple and the trip was unforgettable. Tanini is the perfect getaway.”
+          <br><i>-Gary P</i>
+        </p>
+      </div>
+    </section>
+  </main>
+      <footer class="site-footer">
+        <nav class="footer-nav container">
+          <a href="index.html">Home</a> |
+          <a href="things-to-do.html">Things To Do</a> |
+          <a href="lodging.html">Lodging</a> |
+          <a href="dining.html">Dining</a> | <a href="faq.html">FAQ</a> |
+          <a href="transportation.html">Transportation</a> | 
+          <a href="faq.html">FAQ</a> |
+          <a href="book.html">Book</a>
+        </nav>
+    </footer>
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("bookingForm");
+    if (!form) {
+      console.error("Booking form not found");
+      return;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you! Your booking request has been submitted.");
+      form.reset();
+    });
+  });
+</script>
+</body>
+</html>
